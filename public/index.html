@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Library Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>📚 Library Management System</h1>
+        <p>Welcome to our Library</p>
+    </header>
+
+    <nav>
+        <button onclick="showSection('dashboard')">Dashboard</button>
+        <button onclick="showSection('books')">Books</button>
+        <button onclick="showSection('members')">Members</button>
+        <button onclick="showSection('issue')">Issue Book</button>
+        <button onclick="showSection('return')">Return Book</button>
+    </nav>
+
+    <main>
+
+        <!-- Dashboard -->
+        <section id="dashboard">
+            <h2>Dashboard</h2>
+
+            <div class="cards">
+                <div class="card">
+                    <h3>Total Books</h3>
+                    <p>3</p>
+                </div>
+
+                <div class="card">
+                    <h3>Available Books</h3>
+                    <p>2</p>
+                </div>
+
+                <div class="card">
+                    <h3>Issued Books</h3>
+                    <p>1</p>
+                </div>
+
+                <div class="card">
+                    <h3>Total Members</h3>
+                    <p>3</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Books -->
+        <section id="books" class="hidden">
+            <h2>Books</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Book Name</th>
+                    <th>Author</th>
+                    <th>Status</th>
+                </tr>
+
+                <tr>
+                    <td>B001</td>
+                    <td>The Alchemist</td>
+                    <td>Paulo Coelho</td>
+                    <td>Available</td>
+                </tr>
+
+                <tr>
+                    <td>B002</td>
+                    <td>Atomic Habits</td>
+                    <td>James Clear</td>
+                    <td>Available</td>
+                </tr>
+
+                <tr>
+                    <td>B003</td>
+                    <td>Clean Code</td>
+                    <td>Robert C. Martin</td>
+                    <td>Issued</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Members -->
+        <section id="members" class="hidden">
+            <h2>Members</h2>
+
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                </tr>
+
+                <tr>
+                    <td>M001</td>
+                    <td>Brinda M</td>
+                    <td>brinda@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td>M002</td>
+                    <td>Rahul Kumar</td>
+                    <td>rahul@gmail.com</td>
+                </tr>
+
+                <tr>
+                    <td>M003</td>
+                    <td>Ananya Sharma</td>
+                    <td>ananya@gmail.com</td>
+                </tr>
+            </table>
+        </section>
+
+        <!-- Issue -->
+        <section id="issue" class="hidden">
+            <h2>Issue Book</h2>
+
+            <label>Member Name</label>
+            <select>
+                <option>Brinda M</option>
+                <option>Rahul Kumar</option>
+                <option>Ananya Sharma</option>
+            </select>
+
+            <label>Book</label>
+            <select>
+                <option>The Alchemist</option>
+                <option>Atomic Habits</option>
+            </select>
+
+            <button class="action">Issue Book</button>
+        </section>
+
+        <!-- Return -->
+        <section id="return" class="hidden">
+            <h2>Return Book</h2>
+
+            <label>Book</label>
+            <select>
+                <option>Clean Code</option>
+            </select>
+
+            <button class="action">Return Book</button>
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
